@@ -70,6 +70,7 @@ Copy-Item -Recurse "D:\Github\skill_Art-Thinking\art-thinking-en" "$env:USERPROF
 | **找意義** | 「這個工具我不知道還要做什麼」 | 沿著作品往下游走，找出它保護的人或樂趣 |
 | **跟 AI 講清楚** | 貼上一段語音輸入，說「整理我說的話」 | 修同音錯字、整理成編號條列、分開你說的和它推測的，請你確認 |
 | **寫交接文件** | 「整理成一份交接，我要給另一個 AI」 | 寫出包含出發點、否決過的版本、合作方式、判斷標準的交接文件 |
+| **做一棵專案樹** | 「幫這個專案做一棵樹，看還有哪裡沒好」 | 從「成功建立在什麼之上」一路往下拆，存成一個 .md 加 Mermaid 圖，紅色是還沒完成、綠色是完成 |
 | **檢查路線** | 「看一下這個 roadmap，好玩的東西還在嗎」 | 檢查嚴謹的工作有沒有吃掉當初讓人興奮的功能 |
 | **決定要不要自己做** | 「要用現成的軟體，還是自己做？」 | 檢查別人的工具有沒有吃掉作品的細節、有沒有限制作品的呈現 |
 | **寫動機文或論文的動機段落** | 「幫我寫這個專案為什麼要做」 | 用你的口吻和價值觀寫，不過度解讀 |
@@ -81,7 +82,7 @@ Copy-Item -Recurse "D:\Github\skill_Art-Thinking\art-thinking-en" "$env:USERPROF
 .claude-plugin/
   marketplace.json           plugin 安裝設定
 art-thinking-en/             skill 本體
-  SKILL.md                   主流程：一個標準、四種情境、回覆格式
+  SKILL.md                   主流程：一個標準、五種情境、回覆格式
   references/
     moves.md                 招式表：把 A 變成 B
     patterns.md              15 條行為 pattern 和例子
@@ -111,4 +112,4 @@ The skill lives in `art-thinking-en/`. It is written in English and replies in w
 
 ## What it's for
 
-Ideation, reviewing a project from a non-technical user's point of view, coding defaults (discover instead of asking, remember choices, plain-language errors), finding the meaning in a purely technical project, organizing voice-typed ideas into a numbered brief, writing handoff documents for another AI, checking whether a roadmap still contains the fun parts, and deciding whether to build your own tool.
+Ideation, reviewing a project from a non-technical user's point of view, coding defaults (discover instead of asking, remember choices, plain-language errors), finding the meaning in a purely technical project, organizing voice-typed ideas into a numbered brief, writing handoff documents for another AI, keeping a project tree of what success rests on (red = not done, green = done), checking whether a roadmap still contains the fun parts, and deciding whether to build your own tool.
