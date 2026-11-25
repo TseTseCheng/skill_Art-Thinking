@@ -4,6 +4,8 @@
 
 核心只有一個標準：**對方拿到之後，能不能不問我就讓它動起來？**
 
+<img src="images/before-after.svg" width="480" alt="同一個問題，一般 AI 給一長串選項；Art Thinking 只給一個方案：服務誰、卡在哪、提案、之後、標準">
+
 *English below.*
 
 ---
@@ -87,6 +89,8 @@ Copy-Item -Recurse "D:\Github\skill_Art-Thinking\thinking" "$env:USERPROFILE\.cl
 ```
 .claude-plugin/
   marketplace.json           plugin 安裝設定
+images/
+  before-after.svg           README 最上面的前後對照圖
 thinking/                    skill 本體
   SKILL.md                   主流程：一個標準、五種情境、回覆格式
   references/
@@ -101,6 +105,8 @@ thinking/                    skill 本體
 A skill that lets an AI think like an artist: to brainstorm projects, review designs, make coding decisions, and turn rambling ideas into clear briefs.
 
 One test drives everything: **can someone who receives the work get it moving without asking anyone?**
+
+The picture at the top shows the difference: asked the same question, an ordinary AI lists many options; Art Thinking gives one proposal that fits on a phone screen.
 
 The skill lives in `thinking/`. It is written in English and replies in whatever language the user writes in.
 
