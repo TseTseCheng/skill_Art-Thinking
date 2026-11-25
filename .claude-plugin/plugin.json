@@ -1,0 +1,10 @@
+{
+  "name": "art",
+  "description": "Art Thinking skill",
+  "author": {
+    "name": "TseTseCheng"
+  },
+  "skills": [
+    "./thinking"
+  ]
+}

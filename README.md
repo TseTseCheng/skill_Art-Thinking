@@ -84,11 +84,36 @@ Copy-Item -Recurse "D:\Github\skill_Art-Thinking\thinking" "$env:USERPROFILE\.cl
 | **寫動機文或論文的動機段落** | 「幫我寫這個專案為什麼要做」 | 用你的口吻和價值觀寫，不過度解讀 |
 | **給團隊或外包的 AI 看** | 把 skill 放進專案的 `.claude/skills/` | 所有在這個專案工作的 AI 都會照同一套標準判斷 |
 
+## 怎麼確認它是好的
+
+[PROJECT_TREE.md](PROJECT_TREE.md) 是一棵樹：最上面是「拿到的人不用問就能讓它動起來」，往下拆成能檢查的小項目。綠色是過了，紅色寫著卡在哪，黃色是只有人能判斷的（好不好玩、看不看得懂）。
+
+改完東西跑一次就會重新上色：
+
+```powershell
+node checks/run.mjs
+```
+
+連回覆品質一起重測（幾分鐘，會用到你的 Claude 額度；會同時跑有裝 skill 和沒裝 skill 的版本來比）：
+
+```powershell
+node checks/run.mjs --evals
+```
+
 ## 資料夾內容
 
 ```
 .claude-plugin/
   marketplace.json           plugin 安裝設定
+  plugin.json                plugin 本身的名字和 skill 位置
+PROJECT_TREE.md              專案樹：哪些過了、哪些還紅
+checks/
+  run.mjs                    跑全部檢查、幫樹上色
+evals/                       回覆測試：真的問問題，看回覆有沒有照規則
+  wedding-photo-review/      檢視一個流程
+  voice-brief-clothing/      整理一長串語音輸入
+  results/
+    latest.json              最近一次回覆測試的結果
 images/
   before-after.svg           README 最上面的前後對照圖
 thinking/                    skill 本體
@@ -121,6 +146,10 @@ The skill lives in `thinking/`. It is written in English and replies in whatever
 - **Claude Code (manual, no updates)**: copy the folder to `~/.claude/skills/` (personal) or `<project>/.claude/skills/` (project only).
 - **claude.ai / desktop chat**: zip the folder (folder name must match the skill name), then Customize → Skills → + → Upload a skill. Code execution must be enabled in Settings → Capabilities.
 - Skills don't sync between Claude Code, claude.ai and the API; install on each.
+
+## Is it working?
+
+[PROJECT_TREE.md](PROJECT_TREE.md) is a tree of what success rests on, colored by automated checks (green = passes, red = says what's stuck, yellow = only a person can judge). Run `node checks/run.mjs` to recolor it; add `--evals` to also re-test real replies with and without the skill (a few minutes, uses your Claude account).
 
 ## What it's for
 

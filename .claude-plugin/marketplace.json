@@ -1,13 +1,14 @@
 {
   "name": "art-thinking-skills",
-  "owner": { "name": "TseTseCheng" },
+  "owner": {
+    "name": "TseTseCheng"
+  },
   "description": "Art Thinking skills for Claude Code: think like an artist.",
   "plugins": [
     {
       "name": "art",
       "source": "./",
-      "description": "Art Thinking skill",
-      "skills": ["./thinking"]
+      "description": "Art Thinking skill"
     }
   ]
 }
