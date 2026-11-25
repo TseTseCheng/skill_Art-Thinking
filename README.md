@@ -18,7 +18,7 @@
 
 ## Skill 在哪
 
-skill 放在 [art-thinking-en/](art-thinking-en/)，檔案本身是英文寫的，但會用你說話的語言回覆（簡體就回簡體，繁體就回繁體，英文就回英文）。
+skill 放在 [thinking/](thinking/)，檔案本身是英文寫的，但會用你說話的語言回覆（簡體就回簡體，繁體就回繁體，英文就回英文）。
 
 ## 怎麼安裝
 
@@ -27,7 +27,7 @@ skill 放在 [art-thinking-en/](art-thinking-en/)，檔案本身是英文寫的�
 
 ```powershell
 claude plugin marketplace add TseTseCheng/skill_Art-Thinking
-claude plugin install art-thinking-en@art-thinking-skills
+claude plugin install art@art-thinking-skills
 ```
 
 **打開自動更新**（第三方 marketplace 預設是關的）：在 Claude Code 裡打 `/plugin` → Marketplaces 分頁 → 選 `art-thinking-skills` → 開啟 auto-update。之後只要 push 到 GitHub，各台電腦開 Claude Code 時就會自己拉新版（每次 commit 都算新版本，不用改版號）。想馬上更新：
@@ -36,19 +36,25 @@ claude plugin install art-thinking-en@art-thinking-skills
 claude plugin marketplace update art-thinking-skills
 ```
 
-用 plugin 裝的話，指令會帶 plugin 名稱：`/art-thinking-en:art-thinking-en`。
+用 plugin 裝的話，指令會帶 plugin 名稱：`/art:thinking`。
+
+以前裝過舊名字 `art-thinking-en` 的電腦，要先移除舊的再裝新的（改名不會自動接上）：
+
+```powershell
+claude plugin uninstall art-thinking-en@art-thinking-skills
+```
 
 ### Claude Code（手動複製，不會自動更新）
 把資料夾整個複製到你的個人 skill 資料夾：
 
 ```powershell
-Copy-Item -Recurse "D:\Github\skill_Art-Thinking\art-thinking-en" "$env:USERPROFILE\.claude\skills\art-thinking-en"
+Copy-Item -Recurse "D:\Github\skill_Art-Thinking\thinking" "$env:USERPROFILE\.claude\skills\thinking"
 ```
 
 只想在某個專案裡用的話，改複製到那個專案的 `.claude\skills\` 資料夾。
 
 ### claude.ai 網頁版或桌面 App 的聊天
-1. 把 `art-thinking-en` 資料夾壓成 ZIP（資料夾名稱要跟 skill 名稱一樣）。
+1. 把 `thinking` 資料夾壓成 ZIP（資料夾名稱要跟 skill 名稱一樣）。
 2. 打開 Customize → Skills → 「+」→ Upload a skill，上傳 ZIP。
 3. 需要在 Settings → Capabilities 開啟程式碼執行。
 
@@ -57,7 +63,7 @@ Copy-Item -Recurse "D:\Github\skill_Art-Thinking\art-thinking-en" "$env:USERPROF
 ## 怎麼用
 
 有兩種方式叫它出來：
-- **直接打指令**：`/art-thinking-en:art-thinking-en`（手動複製安裝的話是 `/art-thinking-en`），後面接你要說的話。
+- **直接打指令**：`/art:thinking`（手動複製安裝的話是 `/thinking`），後面接你要說的話。
 - **讓它自己判斷**：講到「用我的思維」「更有創造力」「客戶用不起來」「不知道意義」「整理我說的話」這類話時，AI 會自己用。
 
 ### 可以拿來做的事
@@ -81,7 +87,7 @@ Copy-Item -Recurse "D:\Github\skill_Art-Thinking\art-thinking-en" "$env:USERPROF
 ```
 .claude-plugin/
   marketplace.json           plugin 安裝設定
-art-thinking-en/             skill 本體
+thinking/                    skill 本體
   SKILL.md                   主流程：一個標準、五種情境、回覆格式
   references/
     moves.md                 招式表：把 A 變成 B
@@ -96,16 +102,16 @@ A skill that lets an AI think like an artist: to brainstorm projects, review des
 
 One test drives everything: **can someone who receives the work get it moving without asking anyone?**
 
-The skill lives in `art-thinking-en/`. It is written in English and replies in whatever language the user writes in.
+The skill lives in `thinking/`. It is written in English and replies in whatever language the user writes in.
 
 ## Install
 
 - **Claude Code (recommended, auto-updates across machines)**: this repo is a plugin marketplace. On each machine:
   ```
   claude plugin marketplace add TseTseCheng/skill_Art-Thinking
-  claude plugin install art-thinking-en@art-thinking-skills
+  claude plugin install art@art-thinking-skills
   ```
-  Then turn on auto-update: `/plugin` → Marketplaces → `art-thinking-skills` → enable auto-update. Every push is picked up as a new version. Invoke it as `/art-thinking-en:art-thinking-en`.
+  Then turn on auto-update: `/plugin` → Marketplaces → `art-thinking-skills` → enable auto-update. Every push is picked up as a new version. Invoke it as `/art:thinking`.
 - **Claude Code (manual, no updates)**: copy the folder to `~/.claude/skills/` (personal) or `<project>/.claude/skills/` (project only).
 - **claude.ai / desktop chat**: zip the folder (folder name must match the skill name), then Customize → Skills → + → Upload a skill. Code execution must be enabled in Settings → Capabilities.
 - Skills don't sync between Claude Code, claude.ai and the API; install on each.

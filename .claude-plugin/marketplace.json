@@ -4,10 +4,10 @@
   "description": "Art Thinking skills for Claude Code: think like an artist.",
   "plugins": [
     {
-      "name": "art-thinking-en",
+      "name": "art",
       "source": "./",
       "description": "Art Thinking skill",
-      "skills": ["./art-thinking-en"]
+      "skills": ["./thinking"]
     }
   ]
 }

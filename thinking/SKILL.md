@@ -1,5 +1,5 @@
 ---
-name: art-thinking-en
+name: thinking
 description: Think like an artist to make projects, features, UIs and code more creative and easier to use. Core test - can someone who receives the work get it moving without asking anyone? Use for brainstorming, reviewing whether a project or setup flow is usable, projects that feel like pure tech with no meaning, turning a metaphor (game, chess, galaxy) into a design, turning a long voice-typed idea into a clear brief or handoff doc for another AI, and keeping a project tree of what success rests on (red = not done, green = done). Trigger on "art thinking", "think like an artist", "more creative", "clients can't use it", "make it fun", "I don't know what this is for", "organize what I said", "project tree", "what's still not done". Skip plain bug fixes.
 ---
 
