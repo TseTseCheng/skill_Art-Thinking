@@ -1,0 +1,19 @@
+{
+  "name": "art-thinking-skills",
+  "owner": { "name": "TseTseCheng" },
+  "description": "Art Thinking skills for Claude Code: think like a non-engineer 3D character artist who builds software with AI.",
+  "plugins": [
+    {
+      "name": "art-thinking",
+      "source": "./",
+      "description": "Art Thinking skill (Traditional Chinese edition)",
+      "skills": ["./art-thinking"]
+    },
+    {
+      "name": "art-thinking-en",
+      "source": "./",
+      "description": "Art Thinking skill (English edition)",
+      "skills": ["./art-thinking-en"]
+    }
+  ]
+}
