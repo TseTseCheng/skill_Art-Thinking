@@ -4,7 +4,7 @@
 
 核心只有一個標準：**對方拿到之後，能不能不問我就讓它動起來？**
 
-<img src="images/before-after.svg" width="480" alt="同一個問題，一般 AI 給一長串選項；Art Thinking 只給一個方案：服務誰、卡在哪、提案、之後、標準">
+<img src="images/before-after.svg" width="480" alt="同一個問題，一般 AI 給一長串編號選項；Art Thinking 先講一句結論，再分段寫服務誰、卡在哪、提案、之後、標準">
 
 *English below.*
 
@@ -76,7 +76,7 @@ Copy-Item -Recurse "D:\Github\skill_Art-Thinking\thinking" "$env:USERPROFILE\.cl
 | **檢視一個專案** | 「用我的思維看一下這個專案，客戶會卡在哪」 | 假裝自己是不懂技術的人，從拿到走到「動起來」，列出卡點，給一個改善提案 |
 | **寫程式時做決定** | 「這個設定頁要怎麼做？」 | 自動找、記住上次的選擇、錯誤訊息用白話、直接在東西上調 |
 | **找意義** | 「這個工具我不知道還要做什麼」 | 沿著作品往下游走，找出它保護的人或樂趣 |
-| **跟 AI 講清楚** | 貼上一段語音輸入，說「整理我說的話」 | 修同音錯字、整理成編號條列、分開你說的和它推測的，請你確認 |
+| **跟 AI 講清楚** | 貼上一段語音輸入，說「整理我說的話」 | 修同音錯字、整理成每點開頭有名字的條列、分開你說的和它推測的，請你確認 |
 | **寫交接文件** | 「整理成一份交接，我要給另一個 AI」 | 寫出包含出發點、否決過的版本、合作方式、判斷標準的交接文件 |
 | **做一棵專案樹** | 「幫這個專案做一棵樹，看還有哪裡沒好」 | 從「成功建立在什麼之上」一路往下拆，存成一個 .md 加 Mermaid 圖，紅色是還沒完成、綠色是完成 |
 | **檢查路線** | 「看一下這個 roadmap，好玩的東西還在嗎」 | 檢查嚴謹的工作有沒有吃掉當初讓人興奮的功能 |
@@ -124,4 +124,4 @@ The skill lives in `thinking/`. It is written in English and replies in whatever
 
 ## What it's for
 
-Ideation, reviewing a project from a non-technical user's point of view, coding defaults (discover instead of asking, remember choices, plain-language errors), finding the meaning in a purely technical project, organizing voice-typed ideas into a numbered brief, writing handoff documents for another AI, keeping a project tree of what success rests on (red = not done, green = done), checking whether a roadmap still contains the fun parts, and deciding whether to build your own tool.
+Ideation, reviewing a project from a non-technical user's point of view, coding defaults (discover instead of asking, remember choices, plain-language errors), finding the meaning in a purely technical project, organizing voice-typed ideas into a brief where every point is led by its name, writing handoff documents for another AI, keeping a project tree of what success rests on (red = not done, green = done), checking whether a roadmap still contains the fun parts, and deciding whether to build your own tool.

@@ -20,7 +20,7 @@ Everything else flows from this. If the project can't say, find that person befo
 ## Five situations (can mix)
 
 **Ideation** — fuzzy idea or "just daydreaming"
-- Restate what they said as a numbered list, flag unsure parts, ask to confirm.
+- Restate what they said as short bullets, each led by its name; flag unsure parts, ask to confirm.
 - Find the person and the fun.
 - Take a metaphor's *feel*, never its rules or vocabulary (no turns, no chess terms, no copying existing games).
 - Apply several moves from `references/moves.md`. Be bold.
@@ -49,7 +49,7 @@ Details and examples: `references/patterns.md`.
 
 **Say it clearly to an AI** — for long voice-typed streams:
 - Fix homophone typos without changing meaning; flag unsure words.
-- Numbered list: what they want / who it serves / what they don't want / what's undecided.
+- Bullets, each led by its name: what they want / who it serves / what they don't want / what's undecided.
 - Mark your inferences separately from their words.
 - Confirm; from round two, mark what changed.
 - Handoff doc: what it is, starting point (their words), design essentials, rejected versions, status, how to work with them, and the test.
@@ -63,22 +63,33 @@ Details and examples: `references/patterns.md`.
 - Read the tree before working; rerun the checks and recolor after. Say what is still red and the percent green.
 - When something breaks, walk the tree along the lines to find the node that failed.
 
-## Reply style: short
+## Reply style: short and easy to read
 
-- **Keep it short.** Aim for what fits on one phone screen. No preamble, no recap of this skill, no explaining the method.
-- One proposal, said in a few lines. Bullets over paragraphs; one line per bullet.
-- Only include the parts that matter this round; skip the rest. Don't fill every heading.
-- Plain language; explain any unavoidable term in one short clause.
-- Call things by name. Never point at them by a letter or number code ("B.2", "step 3", "option A").
-- If unsure you understood, restate as a short numbered list and stop there to confirm.
-- The user can always ask for more — default to less.
+Readable on a phone at a glance, without scrolling back.
 
-Typical shape (drop any line that doesn't apply):
+- **Conclusion first.** The first line is the answer or the proposal. No preamble, no recap of this skill, no explaining the method.
+- **Keep it short.** Aim for what fits on one phone screen. The user can always ask for more — default to less.
+- **A bold label opens each block**, written in the user's language. Leave a blank line between blocks.
+- **One line, one thing.** Short sentences. Bullets over paragraphs.
+- **No numbered or lettered lists, ever.** Lead each bullet with its name instead. Never point at things by a code ("B.2", "step 3", "option A").
+- **Plain words.** No code formatting, file paths or English terms in a non-English reply unless needed; when needed, explain in one short clause.
+- Only include the blocks that matter this round. Don't fill every label.
+- If unsure you understood, restate as short bullets, each led by its name, and stop there to confirm.
+
+Typical shape — translate the labels, drop any block that doesn't apply:
 
 ```
-Who it serves: (one line)
-Stuck at: (1–3 bullets)
-Proposal: (one, concrete, 2–4 lines, name the move)
-Later: (max three, a few words each)
-Test: (pass / what's missing, one line)
+One plain sentence: the answer or the proposal.
+
+**Who it serves**  one line
+
+**Stuck at**
+- name: what's in the way (1–3 bullets)
+
+**Proposal: name of the idea**
+2–4 short lines, concrete; name the move
+
+**Later**  max three, a few words each
+
+**Test**  pass, or what's missing, one line
 ```
